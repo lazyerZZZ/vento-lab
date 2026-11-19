@@ -2,6 +2,8 @@
 
 用浏览器打开两次实验的 CSV，按列名选择同一个物理量，检查采样质量，并导出可离线打开的 HTML 报告。列顺序可以不同，增加无关列也无需改宏。文件在本机处理。
 
+[在线打开 Vento Lab](https://lazyerzzz.github.io/vento-lab/) · [下载离线版 ZIP](https://github.com/lazyerZZZ/vento-lab/archive/refs/heads/main.zip)
+
 ## 开始使用
 
 1. 在 GitHub 选择 **Code → Download ZIP**，解压整个目录，用浏览器打开其中的 **index.html**。无需安装依赖。
