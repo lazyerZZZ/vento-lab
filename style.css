@@ -1,0 +1,139 @@
+:root {
+  font:
+    16px/1.6 Inter,
+    system-ui,
+    sans-serif;
+  color: #172840;
+  background: #f4f7fb;
+  color-scheme: light;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header,
+main,
+footer {
+  max-width: 1080px;
+  margin: auto;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d6deea;
+}
+header strong {
+  font-size: 1.35rem;
+}
+a {
+  color: #234cab;
+}
+h1 {
+  margin: 1rem 0 0;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.2;
+}
+h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.3rem;
+}
+small,
+footer {
+  color: #52647b;
+}
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+section {
+  background: white;
+  border: 1px solid #d6deea;
+  border-radius: 12px;
+  padding: 1.2rem;
+  min-width: 0;
+}
+label {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0.5rem 0;
+}
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  max-width: 100%;
+  border: 1px solid #a7b5c8;
+  border-radius: 6px;
+  padding: 0.4rem 0.65rem;
+  background: white;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+.primary {
+  background: #254fb2;
+  color: white;
+  border-color: #254fb2;
+}
+.toolbar,
+.actions {
+  display: flex;
+  align-items: end;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.toolbar button {
+  margin-bottom: 0.5rem;
+}
+[role="alert"] {
+  color: #9b211a;
+}
+#summary svg {
+  width: 100%;
+  height: auto;
+}
+#summary p,
+section p {
+  overflow-wrap: anywhere;
+}
+.table-wrap {
+  overflow: auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #dae2ec;
+  padding: 0.4rem 0.65rem;
+}
+@media (max-width: 650px) {
+  .pair {
+    grid-template-columns: 1fr;
+  }
+  .toolbar {
+    display: grid;
+    align-items: stretch;
+  }
+}
+label {
+  grid-template-columns: minmax(0, 1fr);
+}
+input[type="file"] {
+  width: 100%;
+  min-width: 0;
+}

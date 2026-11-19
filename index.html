@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="在浏览器本地整理实验 CSV，检查采样质量，对比一个物理量并导出离线报告。"
+    />
+    <title>Vento Lab · 实验日志对比</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <strong>Vento Lab</strong
+      ><a href="https://github.com/lazyerZZZ/vento-lab">GitHub</a>
+    </header>
+    <main>
+      <h1>实验日志对比</h1>
+      <p>选择一到两份 CSV，对比同一个物理量。文件在浏览器本地处理。</p>
+      <div class="actions">
+        <button id="demo">载入合成示例</button
+        ><button id="sample">下载示例 CSV</button>
+      </div>
+      <div class="pair">
+        <section>
+          <h2>实验 A</h2>
+          <label
+            >导入 CSV<input id="file-a" type="file" accept=".csv,text/csv"
+          /></label>
+          <p id="name-a">尚未导入</p>
+          <div id="map-a"></div>
+        </section>
+        <section>
+          <h2>实验 B <small>可选</small></h2>
+          <label
+            >导入 CSV<input id="file-b" type="file" accept=".csv,text/csv"
+          /></label>
+          <p id="name-b">尚未导入</p>
+          <div id="map-b"></div>
+          <button id="clear-b" hidden>移除实验 B</button>
+        </section>
+      </div>
+      <div class="toolbar">
+        <label
+          >报告标题<input
+            id="title"
+            value="实验日志对比"
+            maxlength="100" /></label
+        ><label
+          >信号单位<input
+            id="unit"
+            placeholder="例如 °C、mm 或 rad"
+            maxlength="32"
+        /></label>
+        <button id="analyze" class="primary">生成分析</button>
+      </div>
+      <p role="alert" id="error"></p>
+      <section id="results" hidden>
+        <h2>分析结果</h2>
+        <div id="summary"></div>
+        <label
+          >人工复核说明（选填）<textarea
+            rows="3"
+            id="note"
+            placeholder="例如两次实验的采样条件、异常时段"
+          ></textarea></label
+        ><button id="export" class="primary">导出离线 HTML 报告</button>
+      </section>
+    </main>
+    <footer>Vento Lab · MIT License</footer>
+    <script src="core.js"></script>
+    <script src="demo.js"></script>
+    <script src="chart.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
